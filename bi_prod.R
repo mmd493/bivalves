@@ -1,0 +1,30 @@
+#### LOAD LIBRARIES ----
+##Clear the workspace.
+rm(list = ls())
+
+##Load the libraries.
+library(bigrquery)
+library(tinytex)
+library(sp)
+library(ggmap)
+library(devtools)
+library(ggplot2)
+library(dplyr)
+library(scales)
+library(rgeos)
+library(rgdal)  
+library(ggalt)   
+library(grid)
+library(cowplot)
+library(maptools)
+library(OpenStreetMap)
+library(knitr)
+library(kableExtra)
+library(GEOmap)
+library(measurements)
+library(lubridate)
+library(googledrive)
+
+a_prod <- read.csv(file = "TS_FI_AQUACULTURE.csv",header = TRUE, sep = ",")
+a_prod2017 <- filter(a_prod, a_prod$YEAR %in% 2017)
+a_prod2016 <- filter(a_prod, a_prod$YEAR %in% 2016)
